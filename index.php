@@ -4,10 +4,8 @@
   <title>BD MAP SAMPLE</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="bangladesh-map/bd-map.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="bangladesh-map/bd-svg.js"></script>
   <script src="bangladesh-map/bd-map.js"></script>
 </head>
@@ -22,9 +20,7 @@
 </div>
 
 <script> 
-
 $(document).ready(function() {
-	
 	var regionsOfBangladeshDemo = {
 		"bangladesh": [
 			{
@@ -51,19 +47,19 @@ $(document).ready(function() {
 				"area": 500,
 				"population": 4999932
 			},
-			/* {
+			{
 				"region_name": "Mymensingh",
 				"region_id": "mymensinghDivision",
 				"area": 400,
 				"population": 4881756
-			},*/
+			},
 			{
 				"region_name": "Barishal",
 				"region_id": "barisalDivision",
 				"area": 300,
 				"population": 4377487
 			}
-			/*,
+			,
 			 {
 				"region_name": "Khulna",
 				"region_id": "khulnaDivision",
@@ -75,7 +71,7 @@ $(document).ready(function() {
 				"region_id": "chittagongDivision",
 				"area": 100,
 				"population": 4050803
-			} */
+			}
 		],
 		"rangpurDivision": [
 			{
@@ -271,27 +267,28 @@ $(document).ready(function() {
 		]
 	};	
 
-	var selectedAllDistrict = selectedDivision = selectedDistrict = 'bargunaDistrict';
+	var selectedAllDistrict = selectedDivision = selectedDistrict = '';
 	var regionsOfBangladesh = regionsOfBangladeshDemo;
 	var regionKey = 'bangladesh';
 	var title = 'Bangladesh MAP';
 	
+	selectedDistrict = 'rangpurDistrict';
+
 	if(selectedAllDistrict == 'allDistrict') {
 		regionKey = selectedAllDistrict;
 	} 
-	
+
 	if(selectedDivision != '') {
 		regionKey = selectedDivision;
 	}
-	
+
 	if(selectedDistrict !='') {
 		regionKey = selectedDistrict;
 	}
-	
+
+
 	$("#changeSvgMap").generateMap({
 		'title' : title,
-		'width' : '580px',
-		'height' : '680px',
 		'regionKey' : regionKey,
 		'regionData' : regionsOfBangladesh
 	});

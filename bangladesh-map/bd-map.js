@@ -365,7 +365,7 @@
 	function changeSVGMapVal(regionData)
 	{
 		
-		console.log('regionData : ' + JSON.stringify(regionData));
+		//console.log('regionData : ' + JSON.stringify(regionData));
 		for(i = 0; i < regionData.length; i++) {
  
 			var cssOptions = {'fill-opacity' : '1'};
