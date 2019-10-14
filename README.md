@@ -16,18 +16,22 @@ Follow below step
 
 Add CSS 
 
-  <link rel="stylesheet" href="bangladesh-map/bd-map.css">
+```html
+<link rel="stylesheet" href="bangladesh-map/bd-map.css">
+```
 
 Add jQuery
- 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+
+```html
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+```
 
 Add MAP JS library
 
-  <script src="bangladesh-map/bd-svg.js"></script>
-  
-  <script src="bangladesh-map/bd-map.js"></script>
-
+```html
+<script src="bangladesh-map/bd-svg.js"></script>
+<script src="bangladesh-map/bd-map.js"></script>
+```
 
 ## Step 2
 
