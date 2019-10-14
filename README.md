@@ -14,7 +14,7 @@ Follow below step
 
 ## Step 1
 
-Add CSS 
+Add CSS (find it bangladesh-map folder)
 
 ```html
 <link rel="stylesheet" href="bangladesh-map/bd-map.css">
@@ -26,7 +26,7 @@ Add jQuery
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
 ```
 
-Add MAP JS library
+Add MAP JS library (find it bangladesh-map folder)
 
 ```html
 <script src="bangladesh-map/bd-svg.js"></script>
@@ -46,7 +46,7 @@ Please use CSS class "map" and id "changeSvgMap" (You can use CSS id like your c
 Generate Map id will be same your div id. 
 You have to send three data in generateMap. which are below
 1. title ( it will be map title)
-2. regionKey ( it will be 'bangladesh' for all division map. You can see district map With All upazilla, key will be district name)
+2. regionKey ( it will be 'bangladesh' for all division map. You can see district map With All upazilla, key will be district name with District keyword. Exp. rangpurDistrict)
 3. regionsOfBangladesh ( it will be json data. You have to generate JSON data below format)
 
 
@@ -121,12 +121,21 @@ $(document).ready(function() {
 
 
 ## Step 4 (Full Sample)
+We can show bangladesh map using this library 
+1. Bangladesh Eight Division 
+2. Division wise District 
+3. All District 
+4. District wise Upazilla 
+
+To get above 4 type data, you have to set regionKey and regionsOfBanglades data jSON format properly.
+
+Please follow below code properly.
 
 ```html
 
 <script> 
 $(document).ready(function() {
-    var regionsOfBangladeshDemo = {
+    var regionsOfBangladesh = {
 	"bangladesh": [
 		{
 			"region_name": "Rangpur",
@@ -373,7 +382,6 @@ $(document).ready(function() {
 	};	
 
 	var selectedAllDistrict = selectedDivision = selectedDistrict = '';
-	var regionsOfBangladesh = regionsOfBangladeshDemo;
 	var regionKey = 'bangladesh';
 	var title = 'Bangladesh MAP';
 
